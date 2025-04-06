@@ -19,8 +19,8 @@ if "submissions" not in st.session_state:
 
 # --- Email Notification Function ---
 def send_email(to_email, subject, message):
-    EMAIL_ADDRESS = "innovault05@gmail.com"          # Change this
-    EMAIL_PASSWORD = "wdkojkshdgfcinjs"            # Use Gmail App Password
+    EMAIL_ADDRESS = os.getenv("EMAIL_ADDRESS")
+    EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
 
     msg = EmailMessage()
     msg['Subject'] = subject
