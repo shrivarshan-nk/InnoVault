@@ -17,10 +17,9 @@ RUN apt-get update && apt-get install -y \
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Expose Streamlit port
-EXPOSE 8501
+EXPOSE 8080
 
-# Set environment variable to disable telemetry
-ENV STREAMLIT_TELEMETRY="0"
+
 
 # Run Streamlit app
-CMD ["streamlit", "run", "your_app.py", "--server.port=8501", "--server.address=0.0.0.0"]
+CMD streamlit run App.py --server.port=8080 --server.address=0.0.0.0
