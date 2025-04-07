@@ -17,9 +17,9 @@ RUN apt-get update && apt-get install -y \
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Expose Streamlit port
-EXPOSE 8080
+EXPOSE 8081
 
 
 
 # Run Streamlit app
-CMD streamlit run App.py --server.port=8080 --server.address=0.0.0.0
+CMD streamlit run App.py --server.port=8081 --server.address=0.0.0.0
